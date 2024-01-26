@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <a th:href="@{/create}">create</a>
+    <thead>
+    <tr>
+        <th>Tên phòng </th>
+        <th>Chi tiết về phòng </th>
+        <th>Giá </th>
+        <th>Trạng thái </th>
+        <th>Số người tối đa có thể ở trong phòng </th>
+        <th>Số giường trong phòng </th>
+        <th>Chi tiết  </th>
+        <th>Sửa  </th>
+        <th>Xóa </th>
+    </tr>
+    </thead>
+
+<tbody>
+<tr th:each="row,cStatus : ${phong}" >
+<!--    <td th:text="${row.getId()()}"></td>-->
+    <td th:text="${row.getName()}"></td>
+    <td th:text="${row.getDerail()}"></td>
+    <td th:text="${row.getPrice()}"></td>
+    <td th:text="${row.getStatus()}"></td>
+    <td th:text="${row.getNumberOfPerson()}"></td>
+    <td th:text="${row.getNumberBed()}"></td>
+    <td><a th:href="@{/show/{id}(id=${row.getId()})}">show</a></td>
+    <td><a th:href="@{/update/{id}(id=${row.getId()})}">update</a></td>
+    <td><a th:href="@{/delete/{id}(id=${row.getId()})}">delete</a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/save}" th:object="${phong}"
+      method="POST" novalidate="novalidate">
+  <div>
+    <input type="hidden" id="id" th:field="*{id}"/>
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" th:field="*{name}"/>
+  </div>
+  <div>
+    <label for="derail">Derail</label>
+    <input type="text" id="derail" th:field="*{derail}"/>
+  </div>
+  <div>
+    <label for="price">Price</label>
+    <input type="number" id="price" th:field="*{price}"/>
+  </div>
+  <div>
+    <label for="numberOfPerson">Number Of Person</label>
+    <input type="number" id="numberOfPerson" th:field="*{numberOfPerson}"/>
+  </div>
+  <div>
+    <label for="numberBed">Number Bed</label>
+    <input type="number" id="numberBed" th:field="*{numberBed}"/>
+  </div>
+
+
+  <input type="submit" value="Edit"/>
+</form>
+</body>
+</html>

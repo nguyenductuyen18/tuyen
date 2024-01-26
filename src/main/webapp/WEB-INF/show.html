@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<p><strong>Tên phòng:</strong> <span th:text="${phong.name}"></span></p>
+<p><strong>Chi tiết về phòng:</strong> <span th:text="${phong.derail}"></span></p>
+<p><strong>Giá:</strong> <span th:text="${phong.price}"></span></p>
+<p><strong>Trạng thái:</strong> <span th:text="${phong.status}"></span></p>
+<p><strong>Số người tối đa có thể ở trong phòng:</strong> <span th:text="${phong.numberOfPerson}"></span></p>
+<p><strong>Số giường trong phòng:</strong> <span th:text="${phong.numberBed}"></span></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<title>DeleteCustomer</title>
+</head>
+<body>
+<h3>Remove Customer</h3>
+<p>
+    <a th:href="@{/play}">
+        Back to customer list
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/remove}" th:object="${phong}"
+          method="POST" novalidate="novalidate">
+        <div>
+            <input type="hidden" id="id" th:field="*{id}"/>
+        </div>
+        <p><strong>Tên phòng:</strong> <span id="name" th:text="${phong.name}"></span></p>
+        <p><strong>Chi tiết về phòng:</strong> <span id="derail" th:text="${phong.derail}"></span></p>
+        <p><strong>Giá:</strong> <span id="price" th:text="${phong.price}"></span></p>
+        <p><strong>Trạng thái:</strong> <span id="status" th:text="${phong.status}"></span></p>
+        <p><strong>Số người tối đa có thể ở trong phòng:</strong> <span id="numberOfPerson" th:text="${phong.numberOfPerson}"></span></p>
+        <p><strong>Số giường trong phòng:</strong> <span id="numberBed" th:text="${phong.numberBed}"></span></p>
+        <input type="submit" value="Remove"/>
+    </form>
+</div>
+</body>
+</html>
